@@ -274,9 +274,14 @@ module.exports = (
 
     // Handle video tags.
     extractUrlAttributeAndElement(
-      $(`video source[src], video[src], video[poster]`),
+      $(`video source[src], video[src]`),
       `src`
     ).forEach(processUrl)
+
+    // Handle video tags.
+    extractUrlAttributeAndElement($(`video[poster]`), `poster`).forEach(
+      processUrl
+    )
 
     // Handle audio tags.
     extractUrlAttributeAndElement(

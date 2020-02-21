@@ -1,4 +1,4 @@
-# gatsby-remark-copy-linked-files
+# gatsby-remark-copy-linked-files-with-poster
 
 Copies local files linked to/from Markdown (`.md|.markdown`) files to the root directory (i.e., `public` folder).
 
@@ -24,13 +24,13 @@ The `my-awesome-pdf.pdf` file will be copied to the root directory (i.e., `publi
 
 ## Install plugin
 
-`npm install --save gatsby-remark-copy-linked-files`
+`npm install --save gatsby-remark-copy-linked-files-with-poster`
 
 ## Add plugin to Gatsby Config
 
 **Default settings:**
 
-Add `gatsby-remark-copy-linked-files` plugin as a plugin to [`gatsby-transformer-remark`](https://www.gatsbyjs.org/packages/gatsby-transformer-remark/):
+Add `gatsby-remark-copy-linked-files-with-poster` plugin as a plugin to [`gatsby-transformer-remark`](https://www.gatsbyjs.org/packages/gatsby-transformer-remark/):
 
 ```javascript
 // In your gatsby-config.js
@@ -40,7 +40,7 @@ plugins: [
   {
     resolve: `gatsby-transformer-remark`,
     options: {
-      plugins: [`gatsby-remark-copy-linked-files`],
+      plugins: [`gatsby-remark-copy-linked-files-with-poster`],
     },
   },
 ]
@@ -58,7 +58,7 @@ plugins: [
     options: {
       plugins: [
         {
-          resolve: `gatsby-remark-copy-linked-files`,
+          resolve: `gatsby-remark-copy-linked-files-with-poster`,
           options: {
             destinationDir: `path/to/dir`,
             ignoreFileExtensions: [`png`, `jpg`, `jpeg`, `bmp`, `tiff`],
@@ -90,7 +90,7 @@ plugins: [
     options: {
       plugins: [
         {
-          resolve: "gatsby-remark-copy-linked-files",
+          resolve: "gatsby-remark-copy-linked-files-with-poster",
           options: {
             destinationDir: "path/to/dir",
           },
@@ -130,7 +130,7 @@ destinationDir: f => `path/to/dir/hello-${f.name}+${f.hash}_world`
 ```
 
 > **Note:** Make sure you use either `name` or `hash` property in your function expression!
-> If you don't include both `name` and `hash` properties in your function expression, `gatsby-remark-copy-linked-files` plugin will resolve the function expression to a string value and use default settings as a fallback mechanism to prevent your local files from getting copied with the same name (causing files to get overwritten).
+> If you don't include both `name` and `hash` properties in your function expression, `gatsby-remark-copy-linked-files-with-poster` plugin will resolve the function expression to a string value and use default settings as a fallback mechanism to prevent your local files from getting copied with the same name (causing files to get overwritten).
 
 ```js
 # Note: `my-awesome-pdf.pdf` is saved to `public/hello/2a0039f3a61f4510f41678438e4c863a/my-awesome-pdf.pdf`
@@ -188,7 +188,7 @@ plugins: [
     options: {
       plugins: [
         {
-          resolve: "gatsby-remark-copy-linked-files",
+          resolve: "gatsby-remark-copy-linked-files-with-poster",
           options: {
             // `ignoreFileExtensions` defaults to [`png`, `jpg`, `jpeg`, `bmp`, `tiff`]
             // as we assume you'll use gatsby-remark-images to handle

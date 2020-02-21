@@ -1,7 +1,7 @@
 {
   "name": "gatsby-remark-copy-linked-files-with-poster",
   "description": "Find files which are linked to from markdown and copy them to the public directory",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Ivan Saranchonkau <ivan.saranchenkov@gmail.com>",
   "bugs": {
     "url": "https://github.com/Saranchenkov/gatsby/issues"
