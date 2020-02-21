@@ -274,7 +274,7 @@ module.exports = (
 
     // Handle video tags.
     extractUrlAttributeAndElement(
-      $(`video source[src], video[src]`),
+      $(`video source[src], video[src], video[poster]`),
       `src`
     ).forEach(processUrl)
 
